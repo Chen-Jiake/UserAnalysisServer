@@ -10,3 +10,4 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.entity # 所有entity别名类所在的包
+

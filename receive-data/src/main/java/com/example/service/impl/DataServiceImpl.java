@@ -6,6 +6,7 @@ import com.example.entity.Message;
 import com.example.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class DataServiceImpl implements DataService {
@@ -13,6 +14,7 @@ public class DataServiceImpl implements DataService {
     @Autowired
     MessageDao messageDao;
 
+    @Autowired
     ImageDao imageDao;
 
 
@@ -22,7 +24,7 @@ public class DataServiceImpl implements DataService {
     }
 
     @Override
-    public void saveImage() {
-        imageDao.saveImage();
+    public void saveImage(MultipartFile file, String fileName) {
+        imageDao.saveImage(file, fileName);
     }
 }
