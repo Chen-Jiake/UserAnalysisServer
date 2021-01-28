@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.dao.MessageDao">
+
+    <insert id="saveText" parameterType="Message">
+        insert into message(content, time, app)  values(#{content}, #{time}, #{app});
+    </insert>
+
+    <select id="getEmotionReasonByUsername" parameterType="String">
+        select * from db.emotion_reason
+        where username = #{username}
+    </select>
+
+</mapper>
+
+
