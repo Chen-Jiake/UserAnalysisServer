@@ -12,3 +12,8 @@ CREATE TABLE IF NOT EXISTS `emotion_reason` (
     `reason` VARCHAR(100),
     CONSTRAINT `emotion_reason_user_username_fk` FOREIGN KEY (`username`) REFERENCES `user`(`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `binding` (
+    `username` VARCHAR(30) NOT NULL,
+    `binding_username` VARCHAR(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

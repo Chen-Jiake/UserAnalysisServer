@@ -11,4 +11,14 @@
         select * from db.user
         where username = #{username}
     </select>
+
+    <insert id="addBindingUser" parameterType="String">
+        insert into binding(username, binding_username)
+        values (#{arg0}, #{arg1})
+    </insert>
+
+    <select id="findBinding" resultType="Binding">
+        select * from binding
+        where username = #{arg0} and binding_username = #{arg1}
+    </select>
 </mapper>
